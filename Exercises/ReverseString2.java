@@ -1,3 +1,5 @@
+/* This function returns a string in reverse order */
+
 package local.home;
 
 public class ReverseString2 {
@@ -9,7 +11,6 @@ public class ReverseString2 {
         for(int i = str.length() - 1; i >= 0; i--) {
             reverse = reverse + str.charAt(i);
         }
-
         return reverse;
     }
 
