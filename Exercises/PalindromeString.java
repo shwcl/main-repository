@@ -1,4 +1,4 @@
-/* This function checks if a string is a palindrom */
+/* This function checks if a string is a palindrome */
 
 package local.home;
 
