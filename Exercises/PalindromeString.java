@@ -1,9 +1,8 @@
+/* This function checks if a string is a palindrom */
+
 package local.home;
 
 public class PalindromeString {
-
-
-
 
     public static boolean isPalidrome(String str) {
 
@@ -11,9 +10,7 @@ public class PalindromeString {
         int lastIndex = str.length() - 1;
 
         for(int i=0; i <= midIndex - 1; i++) {
-
             if((str.charAt(i) != str.charAt(lastIndex - i))) {
-
                 return false;
             }
         }
@@ -25,11 +22,5 @@ public class PalindromeString {
     public static void main(String[]args) {
 
         System.out.println(isPalidrome("lomol"));
-
-       // public static boolean isPalindrome(int integer) {
-       //     String intStr = String.valueOf(integer);
-       //     return intStr.equals(new StringBuilder(intStr).reverse().toString());
-
     }
-
 }
