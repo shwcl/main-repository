@@ -1,5 +1,7 @@
 /* This function returns the value of a number, n, raised to the power, p. */
 
+package local.home
+
 public class RecursionPowerOfNumber {
     
     public static int getResultFromPower(int n, int p) {
