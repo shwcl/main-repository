@@ -23,33 +23,29 @@
 
 <div class="container">
 
-<h4> Add an Asset</h4>
-<br />
+	<h4> Add an Asset</h4>
+	<br />
 
+	<form class="form" action="addassetx" method="post"> 
 
+	Make: <input type="text" name="make" /> <br></br>
+	Model: <input type="text" name="model" /> <br></br>
+	Type: <select name="assettype">
+					<c:forEach var="assetType" items="${assetTypeList}">
+						<option value="${assetType.assetTypeId}"> ${assetType.assetTypeName} </option>
+					</c:forEach>
+		</select>
 
-<form class="form" action="addassetx" method="post"> 
+	<br></br>
+	<br />
 
-Make: <input type="text" name="make" /> <br></br>
+	<div class="buttongroup">
+		<input class="btn btn-primary" type="submit" value="Submit">
+		<a href="${pageContext.request.contextPath}"><button class="btn btn-primary" type="button" id="home">Back to Home</button></a>
 
-Model: <input type="text" name="model" /> <br></br>
+	</div>
 
-Type: <select name="assettype">
-				<c:forEach var="assetType" items="${assetTypeList}">
-					<option value="${assetType.assetTypeId}"> ${assetType.assetTypeName} </option>
-				</c:forEach>
-			</select>
-
-<br></br>
-<br />
-
-<div class="buttongroup">
- <input class="btn btn-primary" type="submit" value="Submit">
-<a href="${pageContext.request.contextPath}"><button class="btn btn-primary" type="button" id="home">Back to Home</button></a>
-		
-</div>
-
-</form>
+	</form>
 
 </div>
 
