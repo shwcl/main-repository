@@ -20,22 +20,16 @@
 </div>
 
 <div class="container">
+	<h4>Search for an Asset</h4>
 
-<h4>Search for an Asset</h4>
+	<form action="getassetx" method="GET">
 
-
-<form action="getassetx" method="GET">
-
-	Asset ID: <input type="text" name="assetid"><br></br>
-	
-	<div class="buttongroup">
-		<input class="btn btn-primary" type="submit" value="Submit">
-		<a href="${pageContext.request.contextPath}"><button class="btn btn-primary" type="button" id="home">Back to Home</button></a>
-	</div>
-
-</form>
-
-
+		Asset ID: <input type="text" name="assetid"><br></br>
+		<div class="buttongroup">
+			<input class="btn btn-primary" type="submit" value="Submit">
+			<a href="${pageContext.request.contextPath}"><button class="btn btn-primary" type="button" id="home">Back to Home</button></a>
+		</div>
+	</form>
 </div>
 
 </body>
