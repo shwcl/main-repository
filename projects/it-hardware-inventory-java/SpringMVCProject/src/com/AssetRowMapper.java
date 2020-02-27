@@ -18,8 +18,5 @@ public class AssetRowMapper implements RowMapper<Asset> {
         asset.setAssetTypeId(rs.getInt(4));
 
         return asset;  
-		
 	}
-	
 }
-
