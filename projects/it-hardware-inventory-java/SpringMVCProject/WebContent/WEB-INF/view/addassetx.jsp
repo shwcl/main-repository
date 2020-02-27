@@ -8,14 +8,11 @@
 	<title>IT Hardware Inventory App</title>
 </head>
 
-
-
 <body>
 
 <div class="header">
 	<h2>IT Hardware Inventory App</h2>
 </div>
-
 
 <div class="container">
 
@@ -35,7 +32,5 @@
 
 </div>
 
-
 </body>
 </html>
-
