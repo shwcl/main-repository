@@ -22,26 +22,22 @@
 </div>
 
 <div class="container">
+	<h4>Delete an Asset</h4>
+	<p>Are you sure you want to delete an asset record with the following details? </p>
 
-<h4>Delete an Asset</h4>
+	<form action="deleteassetx" method="POST">
+		Asset ID: <input type="text" name="assetid" value="${asset.assetId}" readonly ><br></br>
+		Make: <input type="text" name="assetid" value="${asset.make}	" readonly ><br></br>
+		Model: <input type="text" name="assetid" value="${asset.model}" readonly ><br></br>
+		Asset type: <input type="text" name="assetid" value="${asset.assetType}" readonly ><br></br>
+		<br> </br>
 
-<p>Are you sure you want to delete an asset record with the following details? </p>
+		<div class="buttongroup">
+			 <input class="btn btn-primary" type="submit" value="Submit">
+			<a href="${pageContext.request.contextPath}"><button class="btn btn-primary" type="button" id="home">Back to Home</button></a>
+		</div>
 
-<form action="deleteassetx" method="POST">
-
-Asset ID: <input type="text" name="assetid" value="${asset.assetId}" readonly ><br></br>
-Make: <input type="text" name="assetid" value="${asset.make}	" readonly ><br></br>
-Model: <input type="text" name="assetid" value="${asset.model}" readonly ><br></br>
-Asset type: <input type="text" name="assetid" value="${asset.assetType}" readonly ><br></br>
-
-<br> </br>
-
-	<div class="buttongroup">
-		 <input class="btn btn-primary" type="submit" value="Submit">
-		<a href="${pageContext.request.contextPath}"><button class="btn btn-primary" type="button" id="home">Back to Home</button></a>
-	</div>
-
-</form>
+	</form>
 
 </div>
 
