@@ -17,18 +17,14 @@
 </div>
 
 <div class="container">
-
 	<h4>Update an Asset</h4>
 	<p>${message}</p>
+	<br></br>
 
-<br></br>
-
-	
-<div class="buttongroup">
-<a href="${pageContext.request.contextPath}/viewassets/1"><button class="btn btn-primary" type="button">Back to All Assets</button></a>
-<a href="${pageContext.request.contextPath}"><button class="btn btn-primary" type="button" id="home">Back to Home</button></a>
-		
-</div>
+	<div class="buttongroup">
+	<a href="${pageContext.request.contextPath}/viewassets/1"><button class="btn btn-primary" type="button">Back to All Assets</button></a>
+	<a href="${pageContext.request.contextPath}"><button class="btn btn-primary" type="button" id="home">Back to Home</button></a>
+	</div>
 
 </div>
 
