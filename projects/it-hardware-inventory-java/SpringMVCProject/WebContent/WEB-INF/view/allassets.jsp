@@ -2,8 +2,6 @@
     pageEncoding="ISO-8859-1"%>
     
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
-    
 <%@ page import="com.zinnia.springmvc.Asset" %>
 <%@ page import="java.util.List" %>
 <%@ page import=" org.springframework.ui.Model" %>
@@ -30,7 +28,6 @@
 
 <br />
 
-
 <table class="table table-striped">
 <tr><th>Asset ID</th><th>Make</th><th>Model</th><th>Asset Type</th><th colspan="2">Action</th>
 	<c:forEach var="asset" items="${allAssetList}">
@@ -45,8 +42,6 @@
 		</tr>
 	</c:forEach>
 </table>
-
-
 
 </div>
 
