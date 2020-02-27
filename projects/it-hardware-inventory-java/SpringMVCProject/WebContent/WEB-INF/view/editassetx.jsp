@@ -10,7 +10,6 @@
 	<title>IT Hardware Inventory App</title>
 </head>
 
-
 <body>
 
 <div class="header">
@@ -20,10 +19,7 @@
 <div class="container">
 
 	<h4>Update an Asset</h4>
-	
-	
 	<p>${message}</p>
-	
 
 <br></br>
 
@@ -33,7 +29,6 @@
 <a href="${pageContext.request.contextPath}"><button class="btn btn-primary" type="button" id="home">Back to Home</button></a>
 		
 </div>
-
 
 </div>
 
