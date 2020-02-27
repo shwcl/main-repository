@@ -27,8 +27,6 @@
 
 <p>Are you sure you want to delete an asset record with the following details? </p>
 
-
-
 <form action="deleteassetx" method="POST">
 
 Asset ID: <input type="text" name="assetid" value="${asset.assetId}" readonly ><br></br>
@@ -44,9 +42,6 @@ Asset type: <input type="text" name="assetid" value="${asset.assetType}" readonl
 	</div>
 
 </form>
-
-
-
 
 </div>
 
