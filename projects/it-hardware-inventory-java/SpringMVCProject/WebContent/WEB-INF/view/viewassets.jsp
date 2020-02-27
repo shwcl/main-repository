@@ -29,60 +29,54 @@
 
 
 <div class="container">
+	<h4>List of Assets</h4>
+	<table class="table table-striped">
+	<tr><th>Asset ID</th><th>Make</th><th>Model</th><th>Asset Type</th><th colspan="2">Action</th>
+		<c:forEach var="asset" items="${allAssetsByPageList}">
+			<tr>
+				<td>${asset.assetId}</td>
+				<td>${asset.make}</td>
+				<td>${asset.model}</td>
+				<td>${asset.assetType}</td>
+			<!--  	<td><a href="editasset/${asset.assetId}">Edit</a></td>		-->
+				<td><a href="${pageContext.request.contextPath}/editasset/${asset.assetId}"><button class="btn btn-primary">Edit</button></a></td>
+				<td><a href="${pageContext.request.contextPath}/deleteasset/${asset.assetId}"><button type="button" class="btn btn-primary btn-danger">Delete</button></a></td>
+			</tr>
+		</c:forEach>
+	</table>
+
+	<p></p>
+
+	<!--<c:forEach var="pagenumber" items="${pageNumbersList}">
+		<a href="getallassets2/${pagenumber}">${pagenumber}</a>
+
+	</c:forEach>  	
+
+	-->
 
 
-<h4>List of Assets</h4>
+	<c:forEach var="item" items="${pageNumbersList}">
+		<a href="${pageContext.request.contextPath}/viewassets/${item}">${item}</a>
+		&nbsp; &nbsp;
 
-<table class="table table-striped">
-<tr><th>Asset ID</th><th>Make</th><th>Model</th><th>Asset Type</th><th colspan="2">Action</th>
-	<c:forEach var="asset" items="${allAssetsByPageList}">
-		<tr>
-			<td>${asset.assetId}</td>
-			<td>${asset.make}</td>
-			<td>${asset.model}</td>
-			<td>${asset.assetType}</td>
-		<!--  	<td><a href="editasset/${asset.assetId}">Edit</a></td>		-->
-			<td><a href="${pageContext.request.contextPath}/editasset/${asset.assetId}"><button class="btn btn-primary">Edit</button></a></td>
-			<td><a href="${pageContext.request.contextPath}/deleteasset/${asset.assetId}"><button type="button" class="btn btn-primary btn-danger">Delete</button></a></td>
-		</tr>
-	</c:forEach>
-</table>
+	</c:forEach>  
 
-<p></p>
+	<br> </br>
 
-<!--<c:forEach var="pagenumber" items="${pageNumbersList}">
-	<a href="getallassets2/${pagenumber}">${pagenumber}</a>
+	<c:forEach var="item" items="${prevNextList}">
+		${item}
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-</c:forEach>  	
+	</c:forEach>  
 
--->
+	<br> </br>
+	<p><a href="${pageContext.request.contextPath}"><button class="btn btn-primary">Back to Home</button></a></p>
 
+	<br />
 
-<c:forEach var="item" items="${pageNumbersList}">
-	<a href="${pageContext.request.contextPath}/viewassets/${item}">${item}</a>
-	&nbsp; &nbsp;
-
-</c:forEach>  
-
-<br> </br>
-
-<c:forEach var="item" items="${prevNextList}">
-	${item}
-	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-
-</c:forEach>  
-
-
-<br> </br>
-<p><a href="${pageContext.request.contextPath}"><button class="btn btn-primary">Back to Home</button></a></p>
-
-<br />
-
-
-<div class="footer">
-<p>IT Hardware Inventory App | www.zinniatech.io | All Rights Reserved</p>
-</div>
-
+	<div class="footer">
+	<p>IT Hardware Inventory App | www.zinniatech.io | All Rights Reserved</p>
+	</div>
 
 </div>
 
