@@ -18,8 +18,8 @@ public class MySQLDataSource {
 		
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		dataSource.setUrl("jdbc:mysql//localhost:3306/asset_db");
-		dataSource.setUsername("root");
-		dataSource.setPassword("");
+		dataSource.setUsername("xxxx");
+		dataSource.setPassword("xxxx");
 
 
 	}
