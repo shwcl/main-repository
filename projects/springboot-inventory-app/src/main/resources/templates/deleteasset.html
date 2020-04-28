@@ -16,52 +16,38 @@
 
 <body>
 
-
-
-
 <div class="container">
+	<div class="page-header">
+		<h2>IT Hardware Inventory App</h2>
+	</div>
 
-<div class="page-header">
-	<h2>IT Hardware Inventory App</h2>
-</div>
+	<h4>Delete an Asset</h4>
 
+	<br />
 
-<h4>Delete an Asset</h4>
+	<form action="deleteassetx" method="GET">
+		Asset ID <br />
+		<input type="text" name="assetid" th:value="${assetid}" ><br></br>
 
-<br />
+		<br />
 
+		<input class="btn btn-primary" type="submit" value="Delete">
 
-
-<form action="deleteassetx" method="GET">
-
-Asset ID <br />
-<input type="text" name="assetid" th:value="${assetid}" ><br></br>
-
-
-
-
-<br />
-	
-<input class="btn btn-primary" type="submit" value="Delete">
+		<br />
+	</form>
 
 
-<br />
+	<br />
+	<hr>
 
-</form>
-
-
-<br />
-<hr>
-
-<div class="col-sm-6 col-md-3">
-	<div class="thumbnail tile">
-        <a href="/invapp" class="fa-links">
-           <h1></h1>
-           <i class="fa fa-3x fa-home"></i>
-		</a>
-    </div>
-</div>
-
+	<div class="col-sm-6 col-md-3">
+		<div class="thumbnail tile">
+		<a href="/invapp" class="fa-links">
+		   <h1></h1>
+		   <i class="fa fa-3x fa-home"></i>
+			</a>
+	    </div>
+	</div>
 </div>
 
 </body>
