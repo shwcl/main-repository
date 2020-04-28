@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/mystyle.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/metro-bootstrap.min.css}"  />
+	<title>IT Hardware Inventory App</title>
+</head>
+
+<body>
+
+
+
+
+<div class="container">
+
+<div class="header">
+	<h2>IT Hardware Inventory App</h2>
+</div>
+<hr>
+
+
+<h4>Update an Asset</h4>
+
+<br />
+
+<p><span th:text="${message}" ></span></p>
+
+
+<br />
+
+<a href="http://localhost:8080/invapp/getassets/1"><button type="button" class="btn btn-primary btn-sm">Update another Asset</button></a>
+
+
+<br></br>
+<hr>
+
+<div class="col-sm-6 col-md-3">
+	<div class="thumbnail tile">
+        <a href="/invapp" class="fa-links">
+           <h1></h1>
+           <i class="fa fa-3x fa-home"></i>
+		</a>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

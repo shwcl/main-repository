@@ -1,0 +1,66 @@
+
+
+.header {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 15px;
+
+	
+}
+
+
+.header h2 {
+	text-align: center;
+
+}
+
+
+.container {
+	padding-top: 20px;
+}
+
+
+table tr {
+	height: 40px;                // <-- the rows height 
+}
+
+
+
+.buttongroup {
+	width: 100%;
+
+}
+
+.buttongroup #home {
+	float: right;
+}
+
+
+
+
+
+.btn {
+	
+	padding-top: 0px;
+	padding-buttom: 0px;
+	margin-top:1px;
+	margin-bottom:-5px;
+}
+
+
+.card {
+	
+
+	
+}
+
+
+.footer {
+	border-top: 1px solid #000000;
+}
+
+.footer p {
+	font-size: 90%;
+	text-align:center;
+}
+
