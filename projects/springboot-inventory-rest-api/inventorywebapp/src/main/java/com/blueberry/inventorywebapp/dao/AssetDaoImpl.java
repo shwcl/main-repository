@@ -22,13 +22,8 @@ public class AssetDaoImpl implements AssetDao {
 	    this.jdbcTemplate = jdbcTemplate;
 	}
 	
-//	@Autowired
-//	public AssetDaoImpl (DataSource dataSource) {    
-//	    this.jdbcTemplate = new JdbcTemplate(dataSource);
-//	}
 
-
-	// Method to get an Asset
+	// method to get an Asset
 	public Asset getAsset(int assetId) throws EmptyResultDataAccessException {
 		
 		Asset asset = null;
@@ -50,30 +45,25 @@ public class AssetDaoImpl implements AssetDao {
 	}
 	
 	
-   // Method to get All Assets
-   public List<Asset> getAssets() {
+   	// method to get All Assets
+  	 public List<Asset> getAssets() {
 	   	   
-	   String sql = "SELECT asset_id, make, model, asset.asset_type_id, asset_type_desc FROM asset JOIN asset_type on asset.asset_type_id = asset_type.asset_type_id LIMIT 13";
-   	   List<Asset> assets = jdbcTemplate.query(sql, new AssetRowMapper());
-   	   
-   	   
-   	   
-       return assets;
-   }
+	   	String sql = "SELECT asset_id, make, model, asset.asset_type_id, asset_type_desc FROM asset JOIN asset_type on asset.asset_type_id = asset_type.asset_type_id LIMIT 13";
+   	  	List<Asset> assets = jdbcTemplate.query(sql, new AssetRowMapper());
+
+		 return assets;
+   	}
   
    
-	// Method to Add an Asset
-    public int addAsset(Asset asset) {
+	// method to Add an Asset
+    	public int addAsset(Asset asset) {
 		
-		//insert into the database, the fields of the asset object
-    	
-   
 		String sql = "INSERT INTO asset(make, model, asset_type_id) VALUES(?,?,?)";
 		return jdbcTemplate.update(sql, new Object[] {asset.getMake(), asset.getModel(), asset.getAssetTypeId()});
 	}
 	
 	
-	// Method to Delete an Asset
+	// method to Delete an Asset
 	public int deleteAsset(int assetId) {
 		int result;
 		String sql = "DELETE FROM asset WHERE asset_id = ?";
@@ -82,13 +72,15 @@ public class AssetDaoImpl implements AssetDao {
 	}
 	
 	
-	// Method to Update an Asset
+	// method to Update an Asset
 	public int updateAsset(Asset asset) {
 		int result;
 		String sql = "UPDATE asset SET make = ?, model = ?, asset_type_id = ? WHERE asset_id = ?";
 		result = jdbcTemplate.update(sql, new Object[] {asset.getMake(), asset.getModel(), asset.getAssetTypeId(), asset.getAssetId()});
+		
 		return result;
 	}
+	
 	
 	// Method to return All Asset Types	
 	   public List<AssetType> getAssetTypes() {
@@ -100,13 +92,12 @@ public class AssetDaoImpl implements AssetDao {
 	   } 
 		
 	   	
-	  // Get the Asset Type object / details based on an Asset Type ID submitted
+	  // method to get asset type by asset type ID
 	  public AssetType getAssetType(int assetTypeId) throws EmptyResultDataAccessException {
 		  
 		  AssetType assetType;
 	  
 		  try {
-			  
 			  String sql = "SELECT asset_type_id, asset_type_desc FROM asset_type where asset_type_id = ?";
 			  assetType = jdbcTemplate.queryForObject(sql, new Object[] {assetTypeId}, new AssetTypeRowMapper());	
 			  return assetType;
@@ -115,7 +106,9 @@ public class AssetDaoImpl implements AssetDao {
 		  catch(Exception e) {
 				System.out.println(e);
 				assetType = null;
+	  
 		  }
+		  
 		  return assetType;
 	   }
 }
