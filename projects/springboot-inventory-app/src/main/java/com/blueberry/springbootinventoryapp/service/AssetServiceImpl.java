@@ -19,8 +19,7 @@ public class AssetServiceImpl implements AssetService{
 		return assetDao.getAsset(assetId);
 	}
 	
-	
-	
+
 	public int addAsset(Asset asset) {
 		return assetDao.addAsset(asset);
 	}
@@ -30,25 +29,28 @@ public class AssetServiceImpl implements AssetService{
 		return assetDao.getAssetTypes();
 	}
 	
+	
 	public AssetType getAssetType(int assetTypeId) {
 		return assetDao.getAssetType(assetTypeId);
 	}
 	
-
 
 	public List<Asset> getAssets() {
 		return assetDao.getAssets();
 		
 	}
 	
+	
 	public List<Asset> getAssetsByOffset(int offset) {
 		return assetDao.getAssetsByOffset(offset);
 		
 	}
 	
+	
 	public int updateAsset(Asset asset) {
 		return assetDao.updateAsset(asset);
 	}
+	
 	
 	public int deleteAsset(int assetId) {
 		return assetDao.deleteAsset(assetId);

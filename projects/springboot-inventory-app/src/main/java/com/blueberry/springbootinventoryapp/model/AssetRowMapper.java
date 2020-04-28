@@ -2,15 +2,13 @@ package com.blueberry.springbootinventoryapp.model;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import org.springframework.jdbc.core.RowMapper;
-
 
 public class AssetRowMapper implements RowMapper<Asset> {
 	
 	public Asset mapRow(ResultSet rs, int rowNum) throws SQLException {
 		
-		Asset asset = new Asset();  
+	Asset asset = new Asset();  
 		
         asset.setAssetId(rs.getInt(1));          
         asset.setMake(rs.getString(2));  
@@ -20,7 +18,5 @@ public class AssetRowMapper implements RowMapper<Asset> {
         
         return asset;  
 	}
-	
-	
 
 }

@@ -16,57 +16,51 @@
 
 <body>
 
-
-
-
 <div class="container">
 
-<div class="page-header">
-	<h2>IT Hardware Inventory App</h2>
-</div>
+	<div class="page-header">
+		<h2>IT Hardware Inventory App</h2>
+	</div>
 
 
-<h4>Update an Asset</h4>
+	<h4>Update an Asset</h4>
 
-<br />
+	<br />
 
-<form action="updateassetx" method="POST">
+	<form action="updateassetx" method="POST">
 
-ID <br />
-<input type="text" name="assetid" th:value="${asset.assetId}" readonly><br></br>
+		Assed ID <br />
+		<input type="text" name="assetid" th:value="${asset.assetId}" readonly><br></br>
 
-Make <br />
-<input type="text" name="make" th:value="${asset.make}"><br></br>
+		Make <br />
+		<input type="text" name="make" th:value="${asset.make}"><br></br>
 
-Model <br />
-<input type="text" name="model" th:value="${asset.model}"><br></br>
+		Model <br />
+		<input type="text" name="model" th:value="${asset.model}"><br></br>
 
+		Asset Type <br />	
+		<select name="assettype"> 
+			<option th:each="item:${assetTypeList}" th:value="${item.assetTypeId}" th:text="${item.assetTypeName}" ></option>
+		</select>
 
-Asset Type <br />	
-<select name="assettype"> 
-	<option th:each="item:${assetTypeList}" th:value="${item.assetTypeId}" th:text="${item.assetTypeName}" ></option>
-</select>
+		<br></br>
 
-<br></br>
-	
-<input class="btn btn-primary" type="submit" value="Update">
+		<input class="btn btn-primary" type="submit" value="Update">
 
-
-</form>
+	</form>
 
 
-<br></br>
-<hr>
+	<br></br>
+	<hr>
 
-<div class="col-sm-6 col-md-3">
-	<div class="thumbnail tile">
-        <a href="/invapp" class="fa-links">
-           <h1></h1>
-           <i class="fa fa-3x fa-home"></i>
-		</a>
-    </div>
-</div>
-
+	<div class="col-sm-6 col-md-3">
+		<div class="thumbnail tile">
+		<a href="/invapp" class="fa-links">
+		   <h1></h1>
+		   <i class="fa fa-3x fa-home"></i>
+			</a>
+	    </div>
+	</div>
 </div>
 
 </body>

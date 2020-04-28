@@ -16,41 +16,34 @@
 
 <body>
 
-
-
-
 <div class="container">
 
-<div class="page-header">
-	<h2>IT Hardware Inventory App</h2>
-</div>
-<hr>
+	<div class="page-header">
+		<h2>IT Hardware Inventory App</h2>
+	</div>
+	<hr>
 
+	<h4>Delete an Asset</h4>
 
-<h4>Delete an Asset</h4>
+	<br />
 
-<br />
+	<p><span th:text="${message}" ></span></p>
 
-<p><span th:text="${message}" ></span></p>
+	<br />
 
+	<a href="http://localhost:8080/invapp/getassets/1"><button type="button" class="btn btn-primary btn-sm">Delete another Asset</button></a>
 
-<br />
+	<br></br>
+	<hr>
 
-<a href="http://localhost:8080/invapp/getassets/1"><button type="button" class="btn btn-primary btn-sm">Delete another Asset</button></a>
-
-
-<br></br>
-<hr>
-
-<div class="col-sm-6 col-md-3">
-	<div class="thumbnail tile">
-        <a href="/invapp" class="fa-links">
-           <h1></h1>
-           <i class="fa fa-3x fa-home"></i>
+	<div class="col-sm-6 col-md-3">
+		<div class="thumbnail tile">
+		<a href="/invapp" class="fa-links">
+		   <h1></h1>
+		   <i class="fa fa-3x fa-home"></i>
 		</a>
-    </div>
-</div>
-
+	    </div>
+	</div>
 </div>
 
 </body>
