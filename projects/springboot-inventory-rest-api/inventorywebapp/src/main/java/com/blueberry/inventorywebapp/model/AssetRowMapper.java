@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.RowMapper;
 public class AssetRowMapper implements RowMapper<Asset> {
 	
 	public Asset mapRow(ResultSet rs, int rowNum) throws SQLException {
-		Asset asset = new Asset();  
+	Asset asset = new Asset();  
         asset.setAssetId(rs.getInt(1));  
         asset.setMake(rs.getString(2));  
         asset.setModel(rs.getString(3));  
