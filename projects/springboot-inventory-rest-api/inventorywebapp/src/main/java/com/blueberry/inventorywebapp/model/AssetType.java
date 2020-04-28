@@ -7,8 +7,7 @@ public class AssetType {
 	
 	private int assetTypeId;
 	private String assetTypeName;
-	
-	
+		
 	public int getAssetTypeId() {
 		return assetTypeId;
 	}
