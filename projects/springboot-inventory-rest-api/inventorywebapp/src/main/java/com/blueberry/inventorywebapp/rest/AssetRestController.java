@@ -33,7 +33,6 @@ public class AssetRestController {
 	@GetMapping("/assets/{assetId}")
 	public Asset getAsset(@PathVariable int assetId) {
 		return assetService.getAsset(assetId);
-				
 	}
 	
 	
@@ -49,7 +48,6 @@ public class AssetRestController {
 		if (result == 1) {
 			return "The asset was created successfully!";
 		}
-		
 		return "An error occured while adding the asset";
 	}
 	
@@ -66,6 +64,4 @@ public class AssetRestController {
 		assetService.updateAsset(asset);
 		return asset;
 	}
-	
-
 }
