@@ -16,19 +16,19 @@ public class DataSourceConfig {
 		
 	@Bean
 	public DataSource dataSource() {
+		
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		
 		//Using MySQL database
-        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/asset_db");
-        dataSource.setUsername("root");
-        dataSource.setPassword("");
-        return dataSource;
+		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/asset_db");
+		dataSource.setUsername("root");
+		dataSource.setPassword("");
+		return dataSource;
 	}
 	
-
 	@Bean
-    public JdbcTemplate jdbcTemplate() {
+    	public JdbcTemplate jdbcTemplate() {
         JdbcTemplate jdbcTemplate = new JdbcTemplate();
         jdbcTemplate.setDataSource(dataSource());
         return jdbcTemplate;

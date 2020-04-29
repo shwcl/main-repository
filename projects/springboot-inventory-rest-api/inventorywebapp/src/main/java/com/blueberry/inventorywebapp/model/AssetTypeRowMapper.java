@@ -2,12 +2,10 @@ package com.blueberry.inventorywebapp.model;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import org.springframework.jdbc.core.RowMapper;
 
 public class AssetTypeRowMapper implements RowMapper<AssetType> {
-	
-	
+
 	@Override
 	public AssetType mapRow(ResultSet rs, int rowNum) throws SQLException  {
 		
@@ -16,7 +14,5 @@ public class AssetTypeRowMapper implements RowMapper<AssetType> {
 		assetType.setAssetTypeName(rs.getString(2));  
 
         return assetType;  
-		
 	}
-	
 }
