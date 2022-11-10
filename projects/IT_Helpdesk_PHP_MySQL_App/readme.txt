@@ -1,5 +1,5 @@
 
-Brief
+Project Brief
 The application is used by an admin to manage IT requests and issues report by users. 
 
 Tools used
