@@ -12,3 +12,6 @@ Features and functionalities
 4. Allows to view, add , edit ticket categories, users, and departments
 5. Includes feature to allow search tickets across multiple fields in a single search
 6. Includes pagination
+
+
+Link to Demo:
