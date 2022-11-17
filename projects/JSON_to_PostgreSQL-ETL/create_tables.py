@@ -2,7 +2,7 @@ import psycopg2
 from sql_queries import create_table_queries, drop_table_queries
 
 #connect to default database
-conn = psycopg2.connect(host="localhost", database="udacity", user="postgres", password="password")
+conn = psycopg2.connect(host="localhost", database="database1", user="postgres", password="password")
 conn.set_session(autocommit=True)
 print(conn)
 
