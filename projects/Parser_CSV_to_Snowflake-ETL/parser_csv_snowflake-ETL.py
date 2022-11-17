@@ -64,8 +64,7 @@ for row in input_file:
         result = find_pattern(row, patterns)
         temp_list.append(result)
         if len(temp_list) == 2:
-            output_file = open('c:\\sample\\hss_output_' + time_stamp + '.csv', 'a'
-                                                                                '')
+            output_file = open('c:\\sample\\hss_output_' + time_stamp + '.csv', 'a')
             output_file.write(temp_list[0] + ',' + temp_list[1] + ',' + time_stamp + '\n')
             output_file.close()
             temp_list = []
