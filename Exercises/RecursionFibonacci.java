@@ -1,4 +1,5 @@
 public class RecursionFibonacci {
+    
     public static int fibonacci(int n) {
         if(n == 1) {
             return 1;
@@ -9,6 +10,6 @@ public class RecursionFibonacci {
     }
 
     public static void main (String[] args) {
-        System.out.println("The answer is: " + fibonacci(4));
+        System.out.println("The result is: " + fibonacci(4));
     }
 }
