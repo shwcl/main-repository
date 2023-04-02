@@ -9,7 +9,7 @@ import logging
 import pandas as pd
 import snowflake.connector as snow
 
-logging.basicConfig(filename='c:\sample\HSS\hss_get_data.log', level=logging.INFO,
+logging.basicConfig(filename='c:\samplejob\HSS\hss_get_data.log', level=logging.INFO,
                     format = '%(asctime)s  %(levelname)-10s %(processName)s  %(name)s %(message)s', datefmt='%Y%m%d %H:%M:%S')
 logging.info('Start HSS Get Data process')
 
@@ -25,7 +25,7 @@ data = stdout.readlines()
 
 now = datetime.datetime.now()
 time_stamp = now.strftime('%Y%m%d%H%M%S')
-writerObj = open('c:\\sample\\HSS' + time_stamp + '.txt','w')
+writerObj = open('c:\\samplejob\\HSS' + time_stamp + '.txt','w')
 writerObj.writelines(data)
 logging.info('Dump file generated from switch successfully')
 
@@ -33,7 +33,7 @@ logging.info('Dump file generated from switch successfully')
 # Checking that dump file exists
 try:
     logging.info('Verifying dump file exists.. ')
-    f = open('c:\\sample\\HSS' + time_stamp + '.txt','r')
+    f = open('c:\\samplejob\\HSS' + time_stamp + '.txt','r')
     f.close()
 
 except IOError as e:
@@ -54,7 +54,7 @@ def find_pattern(text, patterns):
     return None
 
 
-file_path = 'c:\\sample\\HSS' + time_stamp + '.txt'
+file_path = 'c:\\samplejob\\HSS' + time_stamp + '.txt'
 input_file = open(file_path)
 
 temp_list = []
@@ -64,7 +64,7 @@ for row in input_file:
         result = find_pattern(row, patterns)
         temp_list.append(result)
         if len(temp_list) == 2:
-            output_file = open('c:\\sample\\hss_output_' + time_stamp + '.csv', 'a')
+            output_file = open('c:\\samplejob\\hss_output_' + time_stamp + '.csv', 'a')
             output_file.write(temp_list[0] + ',' + temp_list[1] + ',' + time_stamp + '\n')
             output_file.close()
             temp_list = []
@@ -78,7 +78,7 @@ cur.execute("use warehouse ****")
 cur.execute("use database ****")
 cur.execute("use role ****")
 
-hss_df = pd.read_csv('c:\\sample\\hss_output_' + time_stamp + '.csv')
+hss_df = pd.read_csv('c:\\samplejob\\hss_output_' + time_stamp + '.csv')
 hss_df.columns = ['msisdn', 'location_state', 'date_time']
 
 insert_query = """INSERT INTO rep_prod.reporting_schema.hss_stage(msisdn, location_state, date_time)
