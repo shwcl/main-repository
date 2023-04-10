@@ -1,4 +1,4 @@
-public class RecursionFibonacci {
+public class RecursionFib {
     
     public static int fibonacci(int n) {
         if(n == 1) {
@@ -9,7 +9,7 @@ public class RecursionFibonacci {
         return fibonacci(n-2) + fibonacci(n-1);
     }
 
-    public static void main (String[] args) {
-        System.out.println("The result is: " + fibonacci(4));
+    public static void main (String[]args) {
+        System.out.println("The result is " + fibonacci(4));
     }
 }
