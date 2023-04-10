@@ -5,7 +5,6 @@ package local.home;
 public class PalindromeString {
 
     public static boolean isPalidrome(String str) {
-
         int midIndex = str.length() / 2;
         int lastIndex = str.length() - 1;
 
@@ -14,13 +13,11 @@ public class PalindromeString {
                 return false;
             }
         }
-
         return true;
     }
 
+    public static void main(String[] args) {
 
-    public static void main(String[]args) {
-
-        System.out.println(isPalidrome("lomol"));
+        System.out.println("Result: " + isPalidrome("lomol"));
     }
 }
