@@ -13,6 +13,6 @@ public class ReverseString {
     }
 
     public static void main (String[] args) {
-        System.out.println(reverse("The black cat jumps over the moon"));
+        System.out.println(reverse("The cow jumps over the moon"));
     }
 }
