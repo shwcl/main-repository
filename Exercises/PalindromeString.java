@@ -1,4 +1,4 @@
-/* This function checks if a string is a palindrome */
+/* Check if a string is palindrome */
 
 package local.home;
 
@@ -17,7 +17,6 @@ public class PalindromeString {
     }
 
     public static void main(String[] args) {
-
         System.out.println("Result: " + isPalidrome("lomol"));
     }
 }
