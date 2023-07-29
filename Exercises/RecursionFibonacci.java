@@ -11,5 +11,6 @@ public class RecursionFib {
 
     public static void main (String[]args) {
         System.out.println("The result is " + fibonacci(4));
+        System.out.println("The result is " + fibonacci(10));
     }
 }
