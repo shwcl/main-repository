@@ -81,7 +81,7 @@ cur.execute("use role ****")
 hss_df = pd.read_csv('c:\\samplejob\\hss_output_' + time_stamp + '.csv')
 hss_df.columns = ['msisdn', 'location_state', 'date_time']
 
-insert_query = """INSERT INTO rep_prod.reporting_schema.hss_stage(msisdn, location_state, date_time)
+insert_query = """INSERT INTO srs_dev.reporting.hss_stage(msisdn, location_state, date_time)
                  VALUES(%s, %s, %s);"""
 
 for index, row in hss_df.iterrows():
