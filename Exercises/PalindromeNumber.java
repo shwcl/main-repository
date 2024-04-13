@@ -1,7 +1,5 @@
 /* This function checks if a number is a palindrome */
 
-package local.home;
-
 public class PalindromeNumber {
 
     public static boolean isPalindrome(int number) {
@@ -12,9 +10,8 @@ public class PalindromeNumber {
         return strNumber.equals(sb.reverse().toString());
     }
 
-
     public static void main(String[]args) {
 
-        System.out.println(isPalindrome(123454321));
+        System.out.println("the result: " + isPalindrome(10507));
     }
 }
